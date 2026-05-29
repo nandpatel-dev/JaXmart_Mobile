@@ -44,7 +44,7 @@ class AppDecoration {
   // Highlighted Container (e.g., Selected item)
   static BoxDecoration selected({required bool isDark}) {
     return BoxDecoration(
-      color: isDark ? AppColors.primaryDark.withOpacity(0.2) : AppColors.primaryLight.withOpacity(0.1),
+      color: isDark ? AppColors.primaryDark.withValues(alpha: 0.2) : AppColors.primaryLight.withValues(alpha: 0.1),
       borderRadius: AppRadius.borderRadiusMD,
       border: Border.all(
         color: AppColors.primary,
