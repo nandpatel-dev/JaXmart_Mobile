@@ -68,7 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       HeroBanner(
                         // Dynamic image based on index
                         imageUrl: index == 0
-                            ? 'https://images.unsplash.com/photo-1586528116311-ad8ed7c1590f?q=80&w=1000&auto=format&fit=crop'
+                            ? 'assets/images/b2b_world_map_green.png'
                             : (index == 1
                                 ? 'https://images.unsplash.com/photo-1553413077-206dd5c3c1e3?q=80&w=1000&auto=format&fit=crop'
                                 : 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop'),

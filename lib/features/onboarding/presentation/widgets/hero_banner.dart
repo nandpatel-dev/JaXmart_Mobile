@@ -32,46 +32,51 @@ class HeroBanner extends StatelessWidget {
             Container(color: const Color(0xFFE2E8F0)),
             
             // Image loader
-            Image.network(
-              imageUrl,
-              fit: BoxFit.cover,
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) return child;
-                return Center(
-                  child: CircularProgressIndicator(
-                    value: loadingProgress.expectedTotalBytes != null
-                        ? loadingProgress.cumulativeBytesLoaded /
-                            (loadingProgress.expectedTotalBytes ?? 1)
-                        : null,
-                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFB45309)),
-                  ),
-                );
-              },
-              errorBuilder: (context, error, stackTrace) {
-                // Fallback placeholder if network fails
-                return Container(
-                  color: const Color(0xFFF1F5F9),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.image_outlined,
-                        size: 64,
-                        color: const Color(0xFF0F172A).withValues(alpha: 0.2),
-                      ),
-                      const SizedBox(height: 12),
-                      Text(
-                        'Image Preview',
-                        style: TextStyle(
-                          color: const Color(0xFF0F172A).withValues(alpha: 0.4),
-                          fontWeight: FontWeight.w500,
+            imageUrl.startsWith('assets/')
+                ? Image.asset(
+                    imageUrl,
+                    fit: BoxFit.cover,
+                  )
+                : Image.network(
+                    imageUrl,
+                    fit: BoxFit.cover,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) return child;
+                      return Center(
+                        child: CircularProgressIndicator(
+                          value: loadingProgress.expectedTotalBytes != null
+                              ? loadingProgress.cumulativeBytesLoaded /
+                                  (loadingProgress.expectedTotalBytes ?? 1)
+                              : null,
+                          valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF10B981)),
                         ),
-                      ),
-                    ],
+                      );
+                    },
+                    errorBuilder: (context, error, stackTrace) {
+                      // Fallback placeholder if network fails
+                      return Container(
+                        color: const Color(0xFFF1F5F9),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.image_outlined,
+                              size: 64,
+                              color: const Color(0xFF0F172A).withValues(alpha: 0.2),
+                            ),
+                            const SizedBox(height: 12),
+                            Text(
+                              'Image Preview',
+                              style: TextStyle(
+                                color: const Color(0xFF0F172A).withValues(alpha: 0.4),
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
             
             // Subtle overlay gradient for premium feel
             Container(
