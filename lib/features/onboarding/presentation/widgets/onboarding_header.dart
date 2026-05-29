@@ -28,7 +28,7 @@ class OnboardingHeader extends StatelessWidget {
                 width: 32,
                 height: 32,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFB45309),
+                  color: const Color(0xFF10B981),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Center(
@@ -61,7 +61,7 @@ class OnboardingHeader extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: const Color(0xFFF5F5F7),
+                color: const Color(0xFFF8FAFC),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(

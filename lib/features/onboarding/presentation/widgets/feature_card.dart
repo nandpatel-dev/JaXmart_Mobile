@@ -34,12 +34,12 @@ class FeatureCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFFB45309).withValues(alpha: 0.1),
+              color: const Color(0xFF10B981).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Icon(
               icon,
-              color: const Color(0xFFB45309),
+              color: const Color(0xFF10B981),
               size: 24,
             ),
           ),

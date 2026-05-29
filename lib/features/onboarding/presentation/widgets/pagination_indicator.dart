@@ -26,7 +26,7 @@ class PaginationIndicator extends StatelessWidget {
             width: isActive ? 32 : 8,
             decoration: BoxDecoration(
               color: isActive
-                  ? const Color(0xFFB45309)
+                  ? const Color(0xFF10B981)
                   : const Color(0xFF0F172A).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(4),
             ),

@@ -64,11 +64,11 @@ class _PrimaryButtonState extends State<PrimaryButton>
           width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
           decoration: BoxDecoration(
-            color: const Color(0xFFB45309),
+            color: const Color(0xFF10B981),
             borderRadius: BorderRadius.circular(24),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFFB45309).withValues(alpha: 0.3),
+                color: const Color(0xFF10B981).withValues(alpha: 0.3),
                 blurRadius: 20,
                 offset: const Offset(0, 8),
               ),

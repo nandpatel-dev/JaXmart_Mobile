@@ -41,7 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F7),
+      backgroundColor: const Color(0xFFF8FAFC),
       body: Column(
         children: [
           // 1. Top Header (Sticky)
@@ -159,7 +159,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               bottom: MediaQuery.of(context).padding.bottom + 20,
             ),
             decoration: BoxDecoration(
-              color: const Color(0xFFF5F5F7),
+              color: const Color(0xFFF8FAFC),
               border: Border(
                 top: BorderSide(
                   color: const Color(0xFF0F172A).withValues(alpha: 0.05),
@@ -216,13 +216,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     decoration: BoxDecoration(
                       color: _controller.currentIndex == 2
-                          ? const Color(0xFFB45309)
+                          ? const Color(0xFF10B981)
                           : const Color(0xFF0F172A),
                       borderRadius: BorderRadius.circular(100), // Pill shape
                       boxShadow: [
                         BoxShadow(
                           color: (_controller.currentIndex == 2
-                                  ? const Color(0xFFB45309)
+                                  ? const Color(0xFF10B981)
                                   : const Color(0xFF0F172A))
                               .withValues(alpha: 0.2),
                           blurRadius: 12,
